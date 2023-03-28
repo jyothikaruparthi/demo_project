@@ -29,5 +29,14 @@ pipeline{
            }
         }
      }
+     stage('quality analysis'){
+        steps{
+           script{
+              withSonarQubeEnv(credentialsId: 'jenkins-access') {
+                 sh 'mvn clean package sonar:sonar'
+              }
+           }
+        }
+     }
    }
 }
