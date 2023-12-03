@@ -16,5 +16,12 @@ pipeline{
         }
       }
     }
+    stage('intigration test'){
+      steps{
+        script{
+          sh 'mvn verify'
+        }
+      }
+    }
   }
 }
