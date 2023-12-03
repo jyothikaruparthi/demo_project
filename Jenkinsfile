@@ -2,7 +2,7 @@
 pipeline{
   agent any
   stages{
-    stage('cloning')
+    stage('cloning'){
       steps{
         script{
           
